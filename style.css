@@ -1,0 +1,435 @@
+/* =========================
+GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* =========================
+BODY
+========================= */
+
+body{
+    background:#f1f5f9;
+    color:#1e293b;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+nav h2{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:#e2e8f0;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    transition:0.3s;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#38bdf8;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* =========================
+HOME SECTION
+========================= */
+
+#home{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background:
+    linear-gradient(rgba(15,23,42,0.7),rgba(15,23,42,0.7)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    padding:20px;
+}
+
+#home h1{
+    font-size:70px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+#home p{
+    font-size:24px;
+    opacity:0.9;
+}
+
+/* =========================
+SECTION COMMON
+========================= */
+
+section{
+    margin:40px auto;
+    width:90%;
+    background:white;
+    border-radius:20px;
+    padding:60px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+section:hover{
+    transform:translateY(-5px);
+}
+
+section h2{
+    font-size:36px;
+    color:#0f172a;
+    margin-bottom:25px;
+    position:relative;
+}
+
+section h2::after{
+    content:'';
+    width:80px;
+    height:4px;
+    background:#38bdf8;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    border-radius:10px;
+}
+
+/* =========================
+TEXT
+========================= */
+
+p{
+    font-size:18px;
+    margin:12px 0;
+    line-height:1.8;
+}
+
+ul{
+    padding-left:20px;
+}
+
+ul li{
+    font-size:18px;
+    margin:15px 0;
+}
+
+/* =========================
+PROJECT CARDS
+========================= */
+
+#projectData{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+#projectData div{
+    background:#f8fafc;
+    border-radius:18px;
+    padding:25px;
+    transition:0.3s;
+    border:1px solid #e2e8f0;
+}
+
+#projectData div:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 25px rgba(0,0,0,0.1);
+}
+
+#projectData h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+/* =========================
+MAP
+========================= */
+
+iframe{
+    border-radius:15px;
+    margin-top:20px;
+}
+
+/* =========================
+FORM
+========================= */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+input,
+textarea{
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#f1f5f9;
+    font-size:16px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,
+textarea:focus{
+    background:white;
+    border:2px solid #38bdf8;
+    box-shadow:0 0 10px rgba(56,189,248,0.3);
+}
+
+textarea{
+    resize:none;
+    height:150px;
+}
+
+/* =========================
+BUTTON
+========================= */
+
+button{
+    background:linear-gradient(to right,#2563eb,#38bdf8);
+    color:white;
+    border:none;
+    padding:16px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 20px rgba(37,99,235,0.3);
+}
+
+/* =========================
+ERROR
+========================= */
+
+#error{
+    color:red;
+    font-weight:500;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* =========================
+DARK MODE
+========================= */
+
+.darkMode{
+    background:#020617;
+    color:white;
+}
+
+.darkMode section{
+    background:#0f172a;
+    color:white;
+}
+
+.darkMode section h2{
+    color:white;
+}
+
+.darkMode input,
+.darkMode textarea{
+    background:#1e293b;
+    color:white;
+}
+
+.darkMode #projectData div{
+    background:#1e293b;
+    border:none;
+}
+
+.darkMode footer{
+    background:black;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    section{
+        padding:40px;
+    }
+
+    #home h1{
+        font-size:50px;
+    }
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    #home h1{
+        font-size:38px;
+    }
+
+    #home p{
+        font-size:18px;
+    }
+
+    section{
+        width:95%;
+        padding:30px 20px;
+    }
+
+    section h2{
+        font-size:28px;
+    }
+}
+/* =========================
+DARK MODE
+========================= */
+
+#darkBtn{
+
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+.darkMode{
+
+    background:#020617;
+    color:white;
+
+}
+
+.darkMode nav{
+
+    background:black;
+
+}
+
+.darkMode section{
+
+    background:#020617;
+    color:white;
+
+}
+
+.darkMode section h2{
+
+    color:white;
+
+}
+
+.darkMode .info-card,
+.darkMode .skill-box,
+.darkMode #projectData div{
+
+    background:#0f172a;
+    color:white;
+
+}
+
+.darkMode form input,
+.darkMode form textarea{
+
+    background:#0f172a;
+    color:white;
+
+}
+
+.darkMode footer{
+
+    background:black;
+
+}
